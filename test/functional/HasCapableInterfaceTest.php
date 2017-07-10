@@ -5,30 +5,30 @@ namespace Dhii\Data\UnitTest;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see \Dhii\Data\GetCapableInterface}.
+ * Tests {@see \Dhii\Data\HasCapableInterface}.
  *
  * @since [*next-version*]
  */
-class GetCapableInterfaceTest extends TestCase
+class HasCapableInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Data\\GetCapableInterface';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Data\\HasCapableInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Data\GetCapableInterface
+     * @return \Dhii\Data\HasCapableInterface The new instance.
      */
     public function createInstance()
     {
         $mock = $this->mock(self::TEST_SUBJECT_CLASSNAME)
-                ->get()
+                ->has()
                 ->new();
 
         return $mock;
