@@ -2,12 +2,14 @@
 
 namespace Dhii\Data\UnitTest;
 
+use Xpmock\TestCase;
+
 /**
- * Tests {@see Dhii\Data\NotFoundExceptionInterface}.
+ * Tests {@see \Dhii\Data\NotFoundExceptionInterface}.
  *
  * @since [*next-version*]
  */
-class NotFoundExceptionInterfaceTest extends \PHPUnit_Framework_TestCase
+class NotFoundExceptionInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
@@ -25,7 +27,9 @@ class NotFoundExceptionInterfaceTest extends \PHPUnit_Framework_TestCase
      */
     public function createInstance()
     {
-        $mock = $this->getMock(self::TEST_SUBJECT_CLASSNAME);
+        $mock = $this->mock(self::TEST_SUBJECT_CLASSNAME)
+                ->getKey()
+                ->new();
 
         return $mock;
     }
