@@ -1,6 +1,6 @@
 {
     "name": "dhii/data-get-capable-interface",
-    "description": "An interface for something that can have data retrieved by key",
+    "description": "An interface for something that can have data retrieved and checked for by key",
     "type": "library",
     "license": "MIT",
     "authors": [
