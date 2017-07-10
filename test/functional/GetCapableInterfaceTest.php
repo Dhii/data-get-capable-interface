@@ -2,12 +2,14 @@
 
 namespace Dhii\Data\UnitTest;
 
+use Xpmock\TestCase;
+
 /**
- * Tests {@see Dhii\Data\GetCapableInterface}.
+ * Tests {@see \Dhii\Data\GetCapableInterface}.
  *
  * @since [*next-version*]
  */
-class GetCapableInterfaceTest extends \PHPUnit_Framework_TestCase
+class GetCapableInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
@@ -25,7 +27,9 @@ class GetCapableInterfaceTest extends \PHPUnit_Framework_TestCase
      */
     public function createInstance()
     {
-        $mock = $this->getMock(self::TEST_SUBJECT_CLASSNAME);
+        $mock = $this->mock(self::TEST_SUBJECT_CLASSNAME)
+                ->get()
+                ->new();
 
         return $mock;
     }
